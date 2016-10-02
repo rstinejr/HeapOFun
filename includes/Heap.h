@@ -25,7 +25,7 @@ public:
         return (heap_.size() > 0) ? heap_[0] : (T *) 0;
     }
 
-    void add(T * e)
+    void insert(T * e)
     {
 	    uint32_t inx = heap_.size();
         

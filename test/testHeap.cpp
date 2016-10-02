@@ -32,12 +32,12 @@ BOOST_AUTO_TEST_CASE(smoke)
     BOOST_CHECK(true);
 }
 
-BOOST_AUTO_TEST_CASE(append)
+BOOST_AUTO_TEST_CASE(insert)
 {
     Heap<Ele> h;
     BOOST_CHECK_EQUAL(0, h.size());
     Ele *e = new Ele(123, "a");
-    h.add(e);
+    h.insert(e);
     BOOST_CHECK_EQUAL(1, h.size());
     delete e;
 }
@@ -51,16 +51,16 @@ BOOST_AUTO_TEST_CASE(top)
     Ele *three = new Ele(3, "three");
     Ele *zero  = new Ele(0, "zero");
 
-    h.add(one);
+    h.insert(one);
     BOOST_CHECK_EQUAL(1, h.top()->key);
     
-    h.add(two);
+    h.insert(two);
     BOOST_CHECK_EQUAL(2, h.top()->key);
 
-    h.add(three);
+    h.insert(three);
     BOOST_CHECK_EQUAL(3, h.top()->key);
 
-    h.add(zero);
+    h.insert(zero);
     BOOST_CHECK_EQUAL(3, h.top()->key);
     
     delete one;
