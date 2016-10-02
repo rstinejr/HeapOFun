@@ -6,13 +6,15 @@
 namespace hfun
 {
 
-class Heap
+template <class T> class Heap
 {
 public:
-    Heap();
+    Heap()
+    {
+    }
     
 private:
-    std::vector<int> heap_;
+    std::vector<T*> heap_;
 };
 
 }

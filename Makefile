@@ -3,7 +3,7 @@
 INCS = includes
 MY_CFLAGS = -c -g -O0 -Wall -I$(INCS)
 MY_LDFLAGS = -lstdc++ -lrt
-OBJS = objs/main.o objs/Heap.o
+OBJS = objs/main.o
 
 PGM = testHeap
 
@@ -15,8 +15,6 @@ objs/%.o:	src/%.cpp
 	g++ $(MY_CFLAGS) $< -o $@
 
 obj/main.o:	includes/Heap.h
-
-obj/Heap.o:	includes/Heap.h
 
 objs:	
 	mkdir objs
