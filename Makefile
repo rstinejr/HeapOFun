@@ -1,4 +1,4 @@
-.PHONY:	clean run
+.PHONY:	clean run test
 
 INCS = includes
 MY_CFLAGS = -c -g -O0 -Wall -I$(INCS)
@@ -26,6 +26,10 @@ $(PGM):	$(OBJS)
 
 clean:
 	rm -rf objs $(PGM)
-		
+	make -C test clean
+
+test:	$(OBJS)
+	make -C test test	
+
 run:	$(PGM)
 	./$(PGM)
