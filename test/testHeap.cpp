@@ -27,7 +27,7 @@ struct Ele
 BOOST_AUTO_TEST_CASE(smoke)
 {
     {
-        Heap<Ele *> h;
+        Heap<Ele> h;
     }
 
     BOOST_CHECK(true);
@@ -35,7 +35,7 @@ BOOST_AUTO_TEST_CASE(smoke)
 
 BOOST_AUTO_TEST_CASE(append)
 {
-    Heap<Ele *> h;
+    Heap<Ele> h;
     BOOST_CHECK_EQUAL(0, h.size());
     Ele *e = new Ele(123, 'a');
     h.add(e);

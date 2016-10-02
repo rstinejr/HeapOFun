@@ -14,7 +14,7 @@ $(OBJS):	objs
 objs/%.o:	src/%.cpp
 	g++ $(MY_CFLAGS) $< -o $@
 
-obj/main.o:	includes/Heap.h
+objs/main.o:	includes/Heap.h
 
 objs:	
 	mkdir objs

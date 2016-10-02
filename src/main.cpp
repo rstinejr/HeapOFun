@@ -19,7 +19,7 @@ struct Node
 
 int main(int argc, char *argv[])
 {
-    Heap<Node *> heap;
+    Heap<Node> heap;
 
     cout << "Done." << endl;
     return 0;

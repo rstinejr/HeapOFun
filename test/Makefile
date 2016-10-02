@@ -5,7 +5,7 @@ MY_BIN_LDFLAGS = -lstdc++ -lrt -lboost_unit_test_framework
 
 PGM  = testHeap
 INCS = ../includes
-OBJS = testHeap.o ../objs/Heap.o
+OBJS = testHeap.o 
 
 .PHONY:	clean run 
 
