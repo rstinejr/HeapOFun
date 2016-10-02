@@ -12,4 +12,26 @@ P and children C1 & C2, R(P, C1) and R(P, C2) are both true.
 
 See the [Wikipedia article on the "heap" data structure](https://en.wikipedia.org/wiki/Heap_(data_structure)).
 
-This project defines a Heap class that supports insert, pop, count, and print operations.
+This project defines a Heap template that supports the following actions: 
+
+* insert - insert an element into the heap.
+* top - examine the element at the top of the heap.
+* pop - remove the element from the top of the heap.
+* size - return the number of elements in the heap
+* print - display heap contents to stdout.
+
+## Heap Elements
+
+The heap template takes an argument that is either a struct or class. This element must has a definition for the ">" operator that defines a total ordering for the set of help elements.
+
+## Build and test info
+
+This project was developed on 64-bit Linux Mint 17.2 Rafaela, using g++ version 4.9.3.
+It uses the Boost Test Framework for unit tests.
+
+To build the project, clone it to your system, cd to the HeapOFun directory and run
+
+```
+make clean test run
+``` 
+
