@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 
+#include <iostream>
 #include <vector>
 
 namespace hfun
@@ -104,8 +105,21 @@ public:
         return;
     }
 
+    void print()
+    {
+        uint32_t ln = heap_.size();
+        for (uint32_t ii = 0; ii < ln; ii++)
+        {
+            std::cout << heap_[ii]->key << " ";
+        }
+        
+        std::cout << std::endl;
+
+        return;
+    }
+
 private:
-    std::vector<T*> heap_;
+    std::vector<T*>  heap_;
 };
 
 }

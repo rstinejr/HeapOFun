@@ -38,31 +38,46 @@ void testPop()
             h.insert(eles[ii]);
         }
 
+        cout << "Key values after loading heap:" << endl;
+        h.print();
+
         Node *e;
 
         e  = h.pop();
         assert(12 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 
         e = h.pop();
         assert(4 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 
         e = h.pop();
         assert(3 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 
         e = h.pop();
         assert(2 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 
         e = h.pop();
         assert(1 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 
         e = h. pop();
         assert(0 == e->key);
         delete e;
+        cout << "Key values after pop:" << endl;
+        h.print();
 }
 
 int main(int argc, char *argv[])
