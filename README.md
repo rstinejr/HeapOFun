@@ -37,6 +37,9 @@ The heap template takes an argument that is either a struct or class. This eleme
 This project was developed on 64-bit Linux Mint 17.2 Rafaela, using g++ version 4.9.3.
 It uses the Boost Test Framework for unit tests.
 
+The project has also been compiled and run on CentOS 6.1, g++ version 4.4.5, and
+Mac OSX.
+
 To build the project, clone it to your system, cd to the HeapOFun directory and run
 
 ```
