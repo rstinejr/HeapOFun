@@ -20,6 +20,14 @@ This project defines a Heap template that supports the following actions:
 * size - return the number of elements in the heap
 * print - display heap contents to stdout.
 
+## Heap in a Vector
+
+Instead of pointers, heap elements are stored in a vector whose elements can be accessed by index.
+The root element goes in position 0.
+
+For an element at position *i*, its left child has index ``2(i + 1) - 1``, and its right child has index
+``2(i + 1)``.
+ 
 ## Heap Elements
 
 The heap template takes an argument that is either a struct or class. This element must has a definition for the ">" operator that defines a total ordering for the set of help elements.
