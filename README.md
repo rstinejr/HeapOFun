@@ -43,3 +43,12 @@ To build the project, clone it to your system, cd to the HeapOFun directory and 
 make clean test run
 ``` 
 
+If you do not have the Boost Test Framework installed, enter
+
+```
+make clean run
+```
+
+The ```main.cpp``` uses POSIX assesrtions to mimic several of the Boost unit
+tests.
+
