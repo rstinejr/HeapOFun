@@ -57,7 +57,7 @@ public:
                 break;  // inx is a leaf node.
             } 
 
-            if ( ! *heap_[inx]  >  *heap_[leftChild] )
+            if ( ! (*heap_[inx]  >  *heap_[leftChild]) )
             {
                 T *hld           = heap_[inx];
                 heap_[inx]       = heap_[leftChild];
