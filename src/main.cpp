@@ -45,38 +45,38 @@ void testPop()
 
         e  = h.pop();
         assert(12 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 
         e = h.pop();
         assert(4 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 
         e = h.pop();
         assert(3 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 
         e = h.pop();
         assert(2 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 
         e = h.pop();
         assert(1 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 
         e = h. pop();
         assert(0 == e->key);
+        cout << "Key values after popping " << e->key << ":" << endl;
         delete e;
-        cout << "Key values after pop:" << endl;
         h.print();
 }
 
