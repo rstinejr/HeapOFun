@@ -2,7 +2,7 @@
 
 INCS = includes
 MY_CFLAGS = -c -g -O0 -Wall -I$(INCS)
-MY_LDFLAGS = -lstdc++ -lrt
+MY_LDFLAGS = -lstdc++
 OBJS = objs/main.o
 
 PGM = testHeap
