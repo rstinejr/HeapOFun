@@ -51,37 +51,33 @@ public:
         uint32_t inx = 0;
         for ( ; ; )
         {
-            uint32_t leftChild = 2 * (inx + 1) - 1;
-            if (leftChild >= ln)
+            int leftChild = 2 * (inx + 1) - 1;
+            if ((unsigned) leftChild >= ln)
             {
                 break;  // inx is a leaf node.
             } 
 
-            if ( ! (*heap_[inx]  >  *heap_[leftChild]) )
+            int rightChild = ((unsigned) leftChild < ln) ? leftChild + 1 : -1;
+
+            if (*heap_[inx] > *heap_[leftChild] && (rightChild == -1 || *heap_[inx] > *heap_[rightChild]))
             {
-                T *hld           = heap_[inx];
-                heap_[inx]       = heap_[leftChild];
-                heap_[leftChild] = hld;
-                inx              = leftChild;
-                continue;
-             }
+                break;  // properly sorted.
+            }
 
-             uint32_t rightChild = leftChild + 1;
-             if (rightChild >= ln)
-             {
-                 break; // inx does not have a right child. 
-             }
-             
-             if ( *heap_[inx] > *heap_[rightChild] )
-             {
-                 break;  // Node is greater than its children, heap is good.
-             }
+            int swapInx;
+            if (rightChild == -1)
+            {
+                swapInx = leftChild;
+            }
+            else
+            {
+                swapInx = (*heap_[leftChild] > *heap_[rightChild]) ? leftChild : rightChild;
+            }
 
-             T *hld            = heap_[inx];
-             heap_[inx]        = heap_[rightChild];
-             heap_[rightChild] = hld;
-             inx               = rightChild;
-             continue;
+            T *hld         = heap_[inx];
+            heap_[inx]     = heap_[swapInx];
+            heap_[swapInx] = hld;
+            inx            = swapInx;
         }                 
 
         return top;
